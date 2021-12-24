@@ -28,7 +28,7 @@ app.listen(PORT_NUMBER); // Listen port
 
 ## URLs
 * ### /api/user
-  * **sample** : domain.com/api/user
+  * **Sample** : domain.com/api/user
    * **GET** : ***success***
     ```
     {
@@ -48,7 +48,7 @@ app.listen(PORT_NUMBER); // Listen port
     }
     ```
 * ### /api/user/:id 
-  *  **sample** : domain.com/api/user/59 -> request.params.id : 59
+  *  **Sample** : domain.com/api/user/59 -> request.params.id : 59
    * **GET** : ***success***
     ```
     {
@@ -85,7 +85,7 @@ app.listen(PORT_NUMBER); // Listen port
       ```
     
 * ### /:pageName
-  * **sample** : domain.com/contact -> request.params.pageName : "contact"
+  * **Sample** : domain.com/contact -> request.params.pageName : "contact"
    * **GET** : ***success***
     * Request: /:pageName
      ```
