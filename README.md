@@ -25,3 +25,74 @@ app.listen(PORT_NUMBER); // Listen port
 * Open console while in project folder,
 * Write "**node server.js**" to console,
 * The server has started!
+
+## URLs
+* ### /api/user
+  * **sample** : domain.com/api/user
+   * **GET** : ***success***
+    ```
+    {
+        "success": true,
+        "users": [
+            {
+                "name": "Joe",
+                "email": "joe@mail.com",
+                "createdAt": "2021-12-23T20:20:04.000Z"
+            },
+            {
+                "name": "Doe",
+                "email": "doe@mail.com",
+                "createdAt": "2021-12-23T20:20:39.000Z"
+            }
+        ]
+    }
+    ```
+* ### /api/user/:id 
+  *  **sample** : domain.com/api/user/59 -> request.params.id : 59
+   * **GET** : ***success***
+    ```
+    {
+        "success": true,
+        "user": {
+                "name": "Joe",
+                "email": "joe@mail.com",
+                "createdAt": "2021-12-23T20:20:04.000Z"
+            }
+    }
+     ```
+   * **GET** : ***failure***
+      ```
+      {
+          "success": false
+      }
+      ```
+   * **PUT(UPDATE)** : ***success***
+    * Request Header: { Authorization : "Bearer TOKEN" }
+     ```
+     {
+         "success": true
+     }
+     ```
+   * **PUT(UPDATE)** : ***failure***
+      ```
+      {
+          "success": false
+      }
+      ```
+      or
+      ```
+      statuscode : 404 & response : 404 page
+      ```
+    
+* ### /:pageName
+  * **sample** : domain.com/contact -> request.params.pageName : "contact"
+   * **GET** : ***success***
+    * Request: /:pageName
+     ```
+     content-type: text/html; utf-8 page
+     ```
+   * **GET** : ***failure***
+    * Request: /:pageName
+      ```
+      statuscode : 404 & response : 404 page
+      ```
