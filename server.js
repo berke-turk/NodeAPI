@@ -47,6 +47,6 @@ app.get('*', (request, response) => {
     funcs.errorPage404(response); return;
 });
 
-app.listen(80);
+app.listen(80); // Listen port
 
 console.log("Started the server!");
